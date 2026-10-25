@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# Web build output (built by `pnpm build` in web/, shipped in release zips)
+web/build/
+
+# Logs and editor files
+*.log
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

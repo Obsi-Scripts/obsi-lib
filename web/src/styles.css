@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+/* Obsi look: matte graphite, flat, sharp corners, red accent (player configurable through --ob-accent). */
+@theme {
+	--color-ob-bg: #121417;
+	--color-ob-panel: #17191c;
+	--color-ob-slot: #1f2226;
+	--color-ob-line: #2e3237;
+	--color-ob-text: #e6e6e6;
+	--color-ob-muted: #8b9096;
+	--color-ob-success: #5fb878;
+	--color-ob-error: #e5534b;
+	--color-ob-warning: #e08a3c;
+	--color-ob-info: #6ea8d8;
+
+	--font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+	--font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+	--animate-ob-in-right: ob-in-right 150ms ease-out both;
+	--animate-ob-in-left: ob-in-left 150ms ease-out both;
+	--animate-ob-in-up: ob-in-up 150ms ease-out both;
+	--animate-ob-in-down: ob-in-down 150ms ease-out both;
+	--animate-ob-out: ob-out 140ms ease-in both;
+
+	@keyframes ob-in-right {
+		from { opacity: 0; transform: translateX(0.75rem); }
+		to { opacity: 1; transform: none; }
+	}
+	@keyframes ob-in-left {
+		from { opacity: 0; transform: translateX(-0.75rem); }
+		to { opacity: 1; transform: none; }
+	}
+	@keyframes ob-in-up {
+		from { opacity: 0; transform: translateY(0.5rem); }
+		to { opacity: 1; transform: none; }
+	}
+	@keyframes ob-in-down {
+		from { opacity: 0; transform: translateY(-0.5rem); }
+		to { opacity: 1; transform: none; }
+	}
+	@keyframes ob-out {
+		from { opacity: 1; }
+		to { opacity: 0; transform: scale(0.98); }
+	}
+}
+
+@theme inline {
+	--color-ob-accent: var(--ob-accent);
+}
+
+:root {
+	--ob-accent: #e5122e;
+}
+
+/* 16px at 1920 wide; every rem based size scales with the game resolution. */
+html {
+	font-size: clamp(11px, 0.8333vw, 24px);
+}
+
+html,
+body,
+#root {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	background: transparent;
+	user-select: none;
+}
+
+body {
+	font-family: var(--font-sans);
+	color: var(--color-ob-text);
+	-webkit-font-smoothing: antialiased;
+}
+
+.ob-label {
+	text-transform: uppercase;
+	letter-spacing: 0.16em;
+	font-size: 0.6875rem;
+	font-weight: 600;
+}
+
+/* Thin bar with tick marks every 10 %. */
+.ob-ticks {
+	background-image: repeating-linear-gradient(
+		to right,
+		transparent 0,
+		transparent calc(10% - 1px),
+		var(--color-ob-line) calc(10% - 1px),
+		var(--color-ob-line) 10%
+	);
+}
+
+@keyframes ob-timer {
+	from { transform: scaleX(1); }
+	to { transform: scaleX(0); }
+}
+
+.ob-timer {
+	transform-origin: left center;
+	animation-name: ob-timer;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
