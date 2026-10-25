@@ -27,11 +27,7 @@
 
 <br>
 
-<table>
-<tr>
-<td width="50%" valign="top">
-
-**Server**
+**Server** · give a bonus to on-duty police
 
 ```lua
 if ObsiLib.job.is(source, 'police')
@@ -45,10 +41,7 @@ if ObsiLib.job.is(source, 'police')
 end
 ```
 
-</td>
-<td width="50%" valign="top">
-
-**Client**
+**Client** · progress bar, 3D sound and text UI
 
 ```lua
 local done = ObsiLib.ui.progress({
@@ -62,10 +55,6 @@ if done then
     ObsiLib.ui.showText({ key = 'E', label = 'Open door' })
 end
 ```
-
-</td>
-</tr>
-</table>
 
 <table>
 <tr>
