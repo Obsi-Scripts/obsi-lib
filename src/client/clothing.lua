@@ -1,4 +1,4 @@
--- Clothing bridge (client): illenium-appearance, fivem-appearance, qb-clothing, esx_skin / skinchanger.
+-- Clothing bridge (client): obsi-appearance, illenium-appearance, fivem-appearance, qb-clothing, esx_skin / skinchanger.
 -- Outfit format (appearance style):
 --   { components = { { component_id, drawable, texture } }, props = { { prop_id, drawable, texture } } }
 -- qb-clothing `outfitData` tables and esx_skin `tshirt_1` style tables are converted automatically.
@@ -26,18 +26,18 @@ local ESX_KEYS = {
     helmet = { 'prop', 0 }, glasses = { 'prop', 1 }, ears = { 'prop', 2 }, watches = { 'prop', 6 }, bracelets = { 'prop', 7 },
 }
 
-local PROVIDERS = { 'illenium-appearance', 'fivem-appearance', 'qb-clothing', 'skinchanger' }
-local ALIASES = { illenium = 'illenium-appearance', fivem = 'fivem-appearance', qb = 'qb-clothing', esx_skin = 'skinchanger', skinchanger = 'skinchanger' }
+local PROVIDERS = { 'obsi-appearance', 'illenium-appearance', 'fivem-appearance', 'qb-clothing', 'skinchanger' }
+local ALIASES = { obsi = 'obsi-appearance', illenium = 'illenium-appearance', fivem = 'fivem-appearance', qb = 'qb-clothing', esx_skin = 'skinchanger', skinchanger = 'skinchanger' }
 
 local clothing = {}
 
----'illenium-appearance' | 'fivem-appearance' | 'qb-clothing' | 'skinchanger' | 'none'
+---'obsi-appearance' | 'illenium-appearance' | 'fivem-appearance' | 'qb-clothing' | 'skinchanger' | 'none'
 function clothing.provider()
     return Core.integration(ObsiConfig.Integrations.Clothing, PROVIDERS, ALIASES)
 end
 
 local function isAppearance(provider)
-    return provider == 'illenium-appearance' or provider == 'fivem-appearance'
+    return provider == 'obsi-appearance' or provider == 'illenium-appearance' or provider == 'fivem-appearance'
 end
 
 local function capture(ped)
@@ -191,7 +191,8 @@ function clothing.restore()
     local ESX = ObsiLib.framework == 'esx' and Core.frameworkObject() or nil
     local done = false
 
-    if provider == 'illenium-appearance' then
+    if provider == 'obsi-appearance' or provider == 'illenium-appearance' then
+        -- obsi-appearance keeps the illenium-appearance event names
         TriggerEvent('illenium-appearance:client:reloadSkin', true)
         done = true
     elseif provider == 'qb-clothing' then

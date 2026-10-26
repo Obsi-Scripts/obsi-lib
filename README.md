@@ -112,7 +112,7 @@ NUI sound engine with live distance falloff, or xsound when it is running.
 | Inventories | ox_inventory, qb-inventory (v2 and v1), ps-inventory, lj-inventory, codem-inventory, jaksam_inventory, custom, framework items |
 | Banking (society) | Renewed-Banking, okokBanking, qb-banking, qb-management, esx_society |
 | Target | ox_target, qb-target |
-| Clothing | illenium-appearance, fivem-appearance, qb-clothing, esx_skin / skinchanger |
+| Clothing | obsi-appearance, illenium-appearance, fivem-appearance, qb-clothing, esx_skin / skinchanger |
 | Vehicle keys | qbx_vehiclekeys, qb-vehiclekeys, wasabi_carlock, mk_vehiclekeys |
 | Fuel | ox_fuel, LegacyFuel, cdn-fuel, ps-fuel, lc_fuel, native |
 | Notifications | built-in, ESX, QBCore, ox_lib, custom |

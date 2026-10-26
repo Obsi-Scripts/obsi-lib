@@ -31,7 +31,7 @@ ObsiConfig.Integrations = {
     Banking = 'auto',     -- 'Renewed-Banking' | 'okokBanking' | 'qb-banking' | 'qb-management' | 'esx_society' | 'none'
     VehicleKeys = 'auto', -- 'qbx_vehiclekeys' | 'qb-vehiclekeys' | 'wasabi_carlock' | 'mk_vehiclekeys' | 'none'
     Target = 'auto',      -- 'ox_target' | 'qb-target' | 'none'
-    Clothing = 'auto',    -- 'illenium-appearance' | 'fivem-appearance' | 'qb-clothing' | 'esx_skin' | 'none'
+    Clothing = 'auto',    -- 'obsi-appearance' | 'illenium-appearance' | 'fivem-appearance' | 'qb-clothing' | 'esx_skin' | 'none'
     Fuel = 'auto',        -- 'ox_fuel' | 'LegacyFuel' | 'cdn-fuel' | 'ps-fuel' | 'lc_fuel' | 'native'
     Sound = 'auto',       -- 'xsound' | 'nui' (built-in player only) | 'none'
 }

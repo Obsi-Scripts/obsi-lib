@@ -2,6 +2,12 @@
 
 All notable changes to obsi-lib are listed here. Versions follow [Semantic Versioning](https://semver.org).
 
+## [1.0.1] - 2026-10-26
+
+### Added
+- Clothing bridge: `obsi-appearance` is detected first and used like illenium-appearance (same exports and
+  skin reload event). Set `Clothing = 'obsi-appearance'` (or `'obsi'`) to force it.
+
 ## [1.0.0] - 2026-10-25
 
 First public release.

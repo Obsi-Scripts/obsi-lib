@@ -8,7 +8,7 @@ use_fxv2_oal 'yes'
 
 name 'obsi-lib'
 author 'Obsi Scripts'
-version '1.0.0'
+version '1.0.1'
 repository 'https://github.com/Obsi-Scripts/obsi-lib'
 description 'Obsi Scripts shared library: framework and inventory bridge, UI (notify, progress, text UI, sounds) and gameplay helpers'
 
